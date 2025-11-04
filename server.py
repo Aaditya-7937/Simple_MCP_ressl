@@ -10,11 +10,13 @@ def search_keyword_in_file(file_path: str, keyword:str) -> str:
         return f"{file_path} not found"
     
     results = []
-
-    with open(file_path, "r", encoding="utf-8") as file:
-        for number, line in enumerate(file, start=1):  # iterate over lines, not characters
-            if keyword.lower() in line.lower():
-                results.append(f"Line {number} : {line.strip()}")
+    try:
+        with open(file_path, "r", encoding="utf-8") as file:
+            for number, line in enumerate(file, start=1):  # iterate over lines, not characters
+                if keyword.lower() in line.lower():
+                    results.append(f"Line {number} : {line.strip()}")
+    except Exception as e:
+        return f"That file format is not supported yet, try using simple files(.txt, .csv etc..) \n Exception: {e}"
 
     if results:
         return "\n".join(results)

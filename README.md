@@ -1,13 +1,11 @@
-# Advanced File Search MCP Server
+# File Search MCP Server
 
-A fully-featured Model Context Protocol (MCP) server providing comprehensive file search capabilities.
+A simple MCP server for searching keywords in text files.
 
 ## Features
 
-- **Multiple Search Modes**: Exact, case-insensitive, regex, and word-boundary matching
-- **Batch Search**: Search across multiple files and directories
-- **File Information**: Get detailed file metadata and statistics
-- **Pattern Matching**: Find files by name patterns and types
-- **Context Awareness**: Show lines around matches for better understanding
-- **Encoding Detection**: Automatic handling of different file encodings
-- **Error Handling**: Robust error handling with informative messages
+- **Keyword Search**: Search for a keyword in `.txt` files.
+- **Case-Insensitive Matching**: Finds keywords regardless of case.
+- **Line Numbers**: Returns the line number for each match.
+- **Basic Error Handling**: Handles file not found and encoding errors.
+

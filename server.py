@@ -12,7 +12,7 @@ def search_keyword_in_file(file_path: str, keyword:str) -> str:
     results = []
     try:
         with open(file_path, "r", encoding="utf-8") as file:
-            for number, line in enumerate(file, start=1):  # iterate over lines, not characters
+            for number, line in enumerate(file, start=1): 
                 if keyword.lower() in line.lower():
                     results.append(f"Line {number} : {line.strip()}")
     except Exception as e:
